@@ -1,0 +1,63 @@
+@url = http://localhost:3000/api
+
+###
+GET {{url}}/post
+ 
+###
+GET {{url}}/post/X
+###
+GET {{url}}/post/autor/X
+
+###
+POST {{url}}/post
+Content-Type: application/json
+
+{
+    "titulo": "LA PRUEBA MAESTRA",
+    "descripcion": "Si lees esto es solo una prueba",
+    "fecha_creacion": "10-11-2024",
+    "categoria": "Creencias",
+    "Autor_id": 6
+}
+###
+PUT  {{url}}/post/X
+Content-Type: application/json
+
+{
+    "titulo": "Nuevo Post",
+    "descripcion": "Se a actualizado incluyendo nuevo post el POST",
+    "fecha_creacion": "10-11-2024",
+    "categoria": "Actualizacion",
+    "Autor_id": 4
+}
+###
+DELETE {{url}}/post/X
+
+////////////////////////////////////////////////////////////
+
+###
+GET {{url}}/autor
+ 
+###
+GET {{url}}/autor/4
+###
+POST {{url}}/autor
+Content-Type: application/json
+
+{
+    "nombre": "Paula Unión Creus",
+    "email": "paulaunioncreus@gmail.com",
+    "imagen": "url dZXe la foto"
+}
+###
+PUT  {{url}}/autor/6
+Content-Type: application/json
+
+{
+    "nombre": "Angel Hernandez",
+    "email": "angeltur@hotmail.com",
+    "imagen": "URL de la foto"
+}
+###
+DELETE {{url}}/autor/4
+
